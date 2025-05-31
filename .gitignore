@@ -1,0 +1,21 @@
+# Directories
+out
+node_modules
+dist
+.vscode-test/
+.vscode/*
+
+# Files
+todo.txt
+output.txt
+vsc-extension-quickstart.md
+gen_zst_file.py
+
+# Files extensions
+*.vsix
+*.pkl
+*.pickle
+
+# Other
+**/__pycache__
+resources/python_lib/*

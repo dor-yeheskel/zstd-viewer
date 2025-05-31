@@ -1,0 +1,76 @@
+{
+  "name": "zstd-viewer",
+  "displayName": "ZST Viewer",
+  "homepage": "https://github.com/dor-yeheskel/zstd-viewer",
+  "icon": "media/logo.png",
+  "description": "Open .zst (Zstandard-compressed) text files seamlessly in VS Code",
+  "version": "0.0.1",
+  "publisher": "dor-yeheskel",
+  "engines": {
+    "vscode": "^1.72.0"
+  },
+  "categories": ["Other"],
+  "keywords": [
+    "zst",
+    "zstd",
+    "zstandard",
+    "zstviewer",
+    "zstdviewer",
+    "decompress",
+    "decompression",
+    "compression",
+    "logviewer",
+    "logfile",
+    "textviewer",
+    "opencompressed",
+    "fileviewer",
+    "vscode-extension"
+  ],
+  "activationEvents": ["onCommand:zstViewer.openDecoded"],
+  "main": "./out/extension.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dor-yeheskel/zstd-viewer"
+  },
+  "bugs": {
+    "url": "https://github.com/dor-yeheskel/zstd-viewer/issues"
+  },
+  "contributes": {
+    "commands": [
+      {
+        "command": "zstViewer.openDecoded",
+        "title": "ZST Viewer: View decoded file"
+      },
+      {
+        "command": "zstViewer.openDecodedCtx",
+        "title": "View decoded .zst file"
+      }
+    ],
+    "menus": {
+        "explorer/context": [
+          {
+            "command": "zstViewer.openDecodedCtx",
+            "when": "resourceExtname == .zst",
+            "group": "navigation"
+          }
+        ],
+        "commandPalette": [
+          {
+            "command": "zstViewer.openDecodedCtx",
+            "when": "false"
+          }
+        ]
+    }
+  },
+  "scripts": {
+    "compile": "tsc -p ./"
+  },
+  "dependencies": {
+    "fzstd": "^0.1.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.25",
+    "@types/vscode": "^1.72.0",
+    "typescript": "^5.4.5"
+  }
+}
