@@ -20,6 +20,11 @@ Tiny extension that lets you open any **`.zst` text file** (CSV, JSON, logs, or 
 
 ---
 
+## Demo:
+https://www.youtube.com/watch?v=47vr5CQLs2c
+
+---
+
 ## Why you might need it 🤕
 
 * **The pain**  
